@@ -718,7 +718,6 @@ function printContract(id) {
       <h3>5. Ответственность и санкции за несвоевременный вывоз</h3>
       <p>В случае если по истечении срока хранения (${end}) Поклажедатель не вывез товар, Хранитель вправе начислять неустойку за каждый день просрочки в размере: <strong>${penDesc}</strong>.</p>
       ${c.maxPenalty>0?'<p>Максимальная неустойка: <strong>'+c.maxPenalty.toLocaleString('ru')+' ₽</strong>.</p>':''}
-      ${overdue>0?'<p style="color:red"><strong>⚠ Текущая просрочка: '+overdue+' дн., штраф: '+penalty.toLocaleString('ru')+' ₽</strong></p>':''}
     </div>
     <div class="doc-section">
       <h3>6. Прочие условия</h3>
