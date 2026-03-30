@@ -16,7 +16,7 @@ router.get("/dashboard", requireAuth, (_req: Request, res: Response) => {
   const incomeSum      = transactions.filter(t => t.type === "income").reduce((s, t) => s + t.total, 0);
   const outcomeSum     = transactions.filter(t => t.type === "outcome").reduce((s, t) => s + t.total, 0);
   const recent         = [...transactions]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort((a, b) => b.id - a.id)
     .slice(0, 10);
 
   res.json({
