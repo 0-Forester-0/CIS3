@@ -24,6 +24,7 @@ router.get("/dashboard", requireAuth, (_req: Request, res: Response) => {
     totalCategories: [...new Set(products.map(p => p.category))].length,
     lowStockProducts: lowStock,
     recentTransactions: recent,
+    totalTransactions: transactions.length,
     totalIncome: incomeSum,
     totalOutcome: outcomeSum,
     warehouseValue,
